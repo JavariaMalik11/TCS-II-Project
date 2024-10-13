@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - Beige Bliss</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-image: url("bg.png"); 
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333; /* Dark text for contrast */
+        }
+
+        .container {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.9); /* Light background */
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome {
+            flex: 2;
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            color: #666; /* Softer text color */
+        }
+
+        .form {
+            flex: 1;
+            padding: 20px;
+            color: #333; /* Dark text for better readability */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #A0522D; /* Light brown */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 4px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9; /* Light input background */
+            color: #000; /* Black text for readability */
+        }
+
+        input[type="submit"] {
+            background-color: #F5DEB3; /* Wheat color */
+            width: 100%;
+            color: #000; /* Black text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #D2B48C; /* Tan color on hover */
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #A0522D; /* Light brown */
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #666; /* Softer text color */
+        }
+
+        img {
+            max-width: 100%; 
+            height: auto;
+            margin-top: 10px; 
+            border-radius: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                max-width: 90%;
+            }
+            .welcome, .form {
+                flex: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome">
+            <h2>Welcome to Outfit Store</h2>
+            <p>Your ultimate destination for stylish and trendy outfits that elevate your wardrobe.</p>
+            <img src="logo.png" alt="logo" width="200px" height="200px"/> 
+        </div>
+        <div class="form">
+            <form action="login.php" method="post">
+                <h2>Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required />
+
+                <input type="submit" value="Login" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
